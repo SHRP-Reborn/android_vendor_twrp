@@ -228,11 +228,13 @@ soong_config_module_type {
     "tw_support_input_aidl_haptics",
     "tw_support_input_aidl_haptics_fix_off",
     "tw_use_samsung_haptics",
-    "shrp_dark",
-    "shrp_lite",
+    "shrp_custom_flashlight",
     "shrp_dev_use_hex",
     "shrp_dev_flash_both_slots",
+    "shrp_express",
+    "shrp_express_use_data",
     "shrp_official",
+    "is_official",
     "shrp_skip_default_addon_1",
     "shrp_skip_default_addon_2",
     "shrp_skip_default_addon_3",
@@ -245,11 +247,47 @@ soong_config_module_type {
 twrp {
     name: "twrp_defaults",
     soong_config_variables: {
-       shrp_build_date: {
-    cflags: ["-DSHRP_BUILD_DATE"]
+    shrp_custom_flashlight: {
+    cflags: ["-DSHRP_CUSTOM_FLASHLIGHT"]
     },
-       shrp_date: {
-    cflags: ["-D_SHRP_DATE"]
+    shrp_dev_use_hex: {
+    cflags: ["-DSHRP_DEV_USE_HEX"]
+    },
+    shrp_dev_flash_both_slots: {
+    cflags: ["-DSHRP_DEV_FLASH_BOTH_SLOTS"]
+    },
+    shrp_express: {
+    cflags: ["-DSHRP_EXPRESS"]
+    },
+    shrp_express_use_data: {
+    cflags: ["-DSHRP_EXPRESS_USE_DATA"]
+    },
+    shrp_build_date: {
+    cflags: ["-DSHRP_BUILD_DATE=%s"]
+    },
+    shrp_date: {
+    cflags: ["-DSHRP_DATE=%s"]
+    },
+    shrp_official: {
+    cflags: ["-DSHRP_OFFICIAL"]
+    },
+    is_official: {
+    cflags: ["-DIS_OFFICIAL"]
+    },
+    shrp_skip_default_addon_1: {
+    cflags: ["-DSHRP_SKIP_DEFAULT_ADDON_1"]
+    },
+    shrp_skip_default_addon_2: {
+    cflags: ["-DSHRP_SKIP_DEFAULT_ADDON_2"]
+    },
+    shrp_skip_default_addon_3: {
+    cflags: ["-DSHRP_SKIP_DEFAULT_ADDON_3"]
+    },
+    shrp_skip_default_addon_4: {
+    cflags: ["-DSHRP_SKIP_DEFAULT_ADDON_4"]
+    },
+    shrp_exclude_magisk_flash: {
+    cflags: ["-DSHRP_EXCLUDE_MAGISK_FLASH"]
     },
     shrp_external_addon_1_name: {
     cflags: ["-DSHRP_EXTERNAL_ADDON_1_NAME=%s"]
@@ -340,36 +378,6 @@ twrp {
     },
     shrp_external_addon_6_successful_text: {
     cflags: ["-DSHRP_EXTERNAL_ADDON_6_SUCCESSFUL_TEXT=%s"]
-    },
-    shrp_dark: {
-    cflags: ["-DSHRP_DARK=%s"]
-    },
-    shrp_lite: {
-    cflags: ["-DSHRP_LITE=%s"]
-    },
-    shrp_dev_use_hex: {
-    cflags: ["-DSHRP_DEV_USE_HEX=%s"]
-    },
-    shrp_dev_flash_both_slots: {
-    cflags: ["-DSHRP_DEV_FLASH_BOTH_SLOTS=%s"]
-    },
-    shrp_official: {
-    cflags: ["-DSHRP_OFFICIAL=%s"]
-    },
-    shrp_skip_default_addon_1: {
-    cflags: ["-DSHRP_SKIP_DEFAULT_ADDON_1=%s"]
-    },
-    shrp_skip_default_addon_2: {
-    cflags: ["-DSHRP_SKIP_DEFAULT_ADDON_2=%s"]
-    },
-    shrp_skip_default_addon_3: {
-    cflags: ["-DSHRP_SKIP_DEFAULT_ADDON_3=%s"]
-    },
-    shrp_skip_default_addon_4: {
-    cflags: ["-DSHRP_SKIP_DEFAULT_ADDON_4=%s"]
-    },
-    shrp_exclude_magisk_flash: {
-    cflags: ["-DSHRP_EXCLUDE_MAGISK_FLASH=%s"]
     },
     tw_delay_touch_init_ms: {
     cflags: ["-DTW_DELAY_TOUCH_INIT_MS=%s"]
