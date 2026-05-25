@@ -75,7 +75,7 @@ EXPORT_TO_SOONG := \
     SHRP_EXTERNAL_ADDON_6_INFO \
     SHRP_EXTERNAL_ADDON_6_FILENAME \
     SHRP_EXTERNAL_ADDON_6_BTN_TEXT \
-    SHRP_EXTERNAL_ADDON_6_SUCCESSFUL_TEXT \
+    SHRP_EXTERNAL_ADDON_6_SUCCESSFUL_TEXT
 
 # Setup SOONG_CONFIG_* vars to export the vars listed above.
 # Documentation here:
@@ -150,37 +150,7 @@ SOONG_CONFIG_twrpGlobalVars += \
     shrp_skip_default_addon_2 \
     shrp_skip_default_addon_3 \
     shrp_skip_default_addon_4 \
-    shrp_exclude_magisk_flash \
-    shrp_external_addon_1_name \
-    shrp_external_addon_1_info \
-    shrp_external_addon_1_filename \
-    shrp_external_addon_1_btn_text \
-    shrp_external_addon_1_successful_text \
-    shrp_external_addon_2_name \
-    shrp_external_addon_2_info \
-    shrp_external_addon_2_filename \
-    shrp_external_addon_2_btn_text \
-    shrp_external_addon_2_successful_text \
-    shrp_external_addon_3_name \
-    shrp_external_addon_3_info \
-    shrp_external_addon_3_filename \
-    shrp_external_addon_3_btn_text \
-    shrp_external_addon_3_successful_text \
-    shrp_external_addon_4_name \
-    shrp_external_addon_4_info \
-    shrp_external_addon_4_filename \
-    shrp_external_addon_4_btn_text \
-    shrp_external_addon_4_successful_text \
-    shrp_external_addon_5_name \
-    shrp_external_addon_5_info \
-    shrp_external_addon_5_filename \
-    shrp_external_addon_5_btn_text \
-    shrp_external_addon_5_successful_text \
-    shrp_external_addon_6_name \
-    shrp_external_addon_6_info \
-    shrp_external_addon_6_filename \
-    shrp_external_addon_6_btn_text \
-    shrp_external_addon_6_successful_text \
+    shrp_exclude_magisk_flash
 
 ifeq ($(TARGET_HW_DISK_ENCRYPTION),true)
 SOONG_CONFIG_twrpGlobalVars += \
@@ -278,33 +248,81 @@ SOONG_CONFIG_twrpGlobalVars_shrp_skip_default_addon_2 := $(SHRP_SKIP_DEFAULT_ADD
 SOONG_CONFIG_twrpGlobalVars_shrp_skip_default_addon_3 := $(SHRP_SKIP_DEFAULT_ADDON_3)
 SOONG_CONFIG_twrpGlobalVars_shrp_skip_default_addon_4 := $(SHRP_SKIP_DEFAULT_ADDON_4)
 SOONG_CONFIG_twrpGlobalVars_shrp_exclude_magisk_flash := $(SHRP_EXCLUDE_MAGISK_FLASH)
+
+ifdef SHRP_EXTERNAL_ADDON_1_NAME
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_1_name
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_1_info
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_1_filename
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_1_btn_text
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_1_successful_text
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_1_name := $(SHRP_EXTERNAL_ADDON_1_NAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_1_info := $(SHRP_EXTERNAL_ADDON_1_INFO)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_1_filename := $(SHRP_EXTERNAL_ADDON_1_FILENAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_1_btn_text := $(SHRP_EXTERNAL_ADDON_1_BTN_TEXT)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_1_successful_text := $(SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT)
+endif
+
+ifdef SHRP_EXTERNAL_ADDON_2_NAME
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_2_name
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_2_info
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_2_filename
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_2_btn_text
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_2_successful_text
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_2_name := $(SHRP_EXTERNAL_ADDON_2_NAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_2_info := $(SHRP_EXTERNAL_ADDON_2_INFO)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_2_filename := $(SHRP_EXTERNAL_ADDON_2_FILENAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_2_btn_text := $(SHRP_EXTERNAL_ADDON_2_BTN_TEXT)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_2_successful_text := $(SHRP_EXTERNAL_ADDON_2_SUCCESSFUL_TEXT)
+endif
+
+ifdef SHRP_EXTERNAL_ADDON_3_NAME
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_3_name
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_3_info
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_3_filename
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_3_btn_text
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_3_successful_text
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_3_name := $(SHRP_EXTERNAL_ADDON_3_NAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_3_info := $(SHRP_EXTERNAL_ADDON_3_INFO)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_3_filename := $(SHRP_EXTERNAL_ADDON_3_FILENAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_3_btn_text := $(SHRP_EXTERNAL_ADDON_3_BTN_TEXT)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_3_successful_text := $(SHRP_EXTERNAL_ADDON_3_SUCCESSFUL_TEXT)
+endif
+
+ifdef SHRP_EXTERNAL_ADDON_4_NAME
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_4_name
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_4_info
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_4_filename
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_4_btn_text
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_4_successful_text
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_4_name := $(SHRP_EXTERNAL_ADDON_4_NAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_4_info := $(SHRP_EXTERNAL_ADDON_4_INFO)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_4_filename := $(SHRP_EXTERNAL_ADDON_4_FILENAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_4_btn_text := $(SHRP_EXTERNAL_ADDON_4_BTN_TEXT)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_4_successful_text := $(SHRP_EXTERNAL_ADDON_4_SUCCESSFUL_TEXT)
+endif
+
+ifdef SHRP_EXTERNAL_ADDON_5_NAME
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_5_name
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_5_info
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_5_filename
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_5_btn_text
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_5_successful_text
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_5_name := $(SHRP_EXTERNAL_ADDON_5_NAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_5_info := $(SHRP_EXTERNAL_ADDON_5_INFO)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_5_filename := $(SHRP_EXTERNAL_ADDON_5_FILENAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_5_btn_text := $(SHRP_EXTERNAL_ADDON_5_BTN_TEXT)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_5_successful_text := $(SHRP_EXTERNAL_ADDON_5_SUCCESSFUL_TEXT)
+endif
+
+ifdef SHRP_EXTERNAL_ADDON_6_NAME
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_6_name
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_6_info
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_6_filename
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_6_btn_text
+SOONG_CONFIG_twrpGlobalVars += shrp_external_addon_6_successful_text
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_6_name := $(SHRP_EXTERNAL_ADDON_6_NAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_6_info := $(SHRP_EXTERNAL_ADDON_6_INFO)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_6_filename := $(SHRP_EXTERNAL_ADDON_6_FILENAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_6_btn_text := $(SHRP_EXTERNAL_ADDON_6_BTN_TEXT)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_6_successful_text := $(SHRP_EXTERNAL_ADDON_6_SUCCESSFUL_TEXT)
+endifS
