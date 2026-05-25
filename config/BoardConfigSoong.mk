@@ -325,4 +325,4 @@ SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_6_info := $(SHRP_EXTERNAL_ADDON_
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_6_filename := $(SHRP_EXTERNAL_ADDON_6_FILENAME)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_6_btn_text := $(SHRP_EXTERNAL_ADDON_6_BTN_TEXT)
 SOONG_CONFIG_twrpGlobalVars_shrp_external_addon_6_successful_text := $(SHRP_EXTERNAL_ADDON_6_SUCCESSFUL_TEXT)
-endifS
+endif
