@@ -41,6 +41,8 @@ EXPORT_TO_SOONG := \
     SHRP_DATE \
     SHRP_OFFICIAL \
     IS_OFFICIAL \
+    SHRP_AB \
+    SHPR_HAS_RECOVERY_PARTITION \
     SHRP_SKIP_DEFAULT_ADDON_1 \
     SHRP_SKIP_DEFAULT_ADDON_2 \
     SHRP_SKIP_DEFAULT_ADDON_3 \
@@ -146,6 +148,8 @@ SOONG_CONFIG_twrpGlobalVars += \
     shrp_date \
     shrp_official \
     is_official \
+    shrp_ab \
+    shrp_has_recovery_partition \
     shrp_skip_default_addon_1 \
     shrp_skip_default_addon_2 \
     shrp_skip_default_addon_3 \
@@ -243,6 +247,8 @@ SOONG_CONFIG_twrpGlobalVars_shrp_build_date := $(SHRP_BUILD_DATE)
 SOONG_CONFIG_twrpGlobalVars_shrp_date := $(SHRP_DATE)
 SOONG_CONFIG_twrpGlobalVars_shrp_official := $(SHRP_OFFICIAL)
 SOONG_CONFIG_twrpGlobalVars_is_official := $(IS_OFFICIAL)
+SOONG_CONFIG_twrpGlobalVars_shrp_ab := $(SHRP_AB)
+SOONG_CONFIG_twrpGlobalVars_shrp_has_recovery_partition := $(SHPR_HAS_RECOVERY_PARTITION)
 SOONG_CONFIG_twrpGlobalVars_shrp_skip_default_addon_1 := $(SHRP_SKIP_DEFAULT_ADDON_1)
 SOONG_CONFIG_twrpGlobalVars_shrp_skip_default_addon_2 := $(SHRP_SKIP_DEFAULT_ADDON_2)
 SOONG_CONFIG_twrpGlobalVars_shrp_skip_default_addon_3 := $(SHRP_SKIP_DEFAULT_ADDON_3)

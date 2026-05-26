@@ -235,6 +235,8 @@ soong_config_module_type {
     "shrp_express_use_data",
     "shrp_official",
     "is_official",
+    "shrp_ab",
+    "shrp_has_recovery_partition",
     "shrp_skip_default_addon_1",
     "shrp_skip_default_addon_2",
     "shrp_skip_default_addon_3",
@@ -273,6 +275,12 @@ twrp {
     },
     is_official: {
     cflags: ["-DIS_OFFICIAL"]
+    },
+    shrp_ab: {
+    cflags: ["-DSHRP_AB"]
+    },
+    shrp_has_recovery_partition: {
+    cflags: ["-DSHRP_HAS_RECOVERY_PARTITION"]
     },
     shrp_skip_default_addon_1: {
     cflags: ["-DSHRP_SKIP_DEFAULT_ADDON_1"]
